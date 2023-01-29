@@ -35,7 +35,7 @@ export const authFunc = () => {
         logoutBtn.classList.add("d-none");
     };
     const checkAuth = () => {
-        const user=JSON.parse.localStorage.getItem("auth");
+        const user=JSON.parse(localStorage.getItem("auth"));
         if(user) {
             getData("/profile").then((data) => {
             console.log(data);
@@ -64,6 +64,7 @@ export const authFunc = () => {
     closeBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
             closeModal(modal);
+           
         });
     });
     loginBtn.addEventListener("click", () => {
@@ -97,6 +98,9 @@ export const authFunc = () => {
     });
     openCartBtn.addEventListener("click", () => {
         openModal(cartModal);
+       
     });
+    
+
     checkAuth();
 };
