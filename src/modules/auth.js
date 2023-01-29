@@ -1,11 +1,12 @@
 import { openModal, closeModal } from "./modals";
 import { getData } from "./api";
+
 export const authFunc = () => {
     const authBtn = document.getElementById("open-auth-btn");
     const openCartBtn = document.getElementById("open-cart-btn");
     const logoutBtn = document.getElementById("logout-btn");
     const modal = document.getElementById("auth-modal");
-    const cartModal = document.getElementById("cart-modal");
+   
     const closeBtns = modal.querySelectorAll(".close-btn");
     const loginBtn = modal.querySelector(".login-btn");
 
@@ -96,10 +97,11 @@ export const authFunc = () => {
         localStorage.removeItem("auth");
         logout();
     });
-    openCartBtn.addEventListener("click", () => {
-        openModal(cartModal);
+    // openCartBtn.addEventListener("click", () => {
+    //     openModal(cartModal);
        
-    });
+       
+    // });
     
 
     checkAuth();

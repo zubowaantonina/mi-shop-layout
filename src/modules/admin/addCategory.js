@@ -79,14 +79,7 @@ export const addCategory = () => {
     })
     saveBtn.addEventListener('click', () => {
         // console.log(categoryData);
-        postData('/categories', {
-            method: 'POST',
-            body: JSON.stringify(categoryData),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-
-        }).then(() => {
+        postData('/categories', categoryData).then(() => {
             nameInp.value='';
             priviewInp.value='';
             updateTable()

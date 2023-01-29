@@ -46,18 +46,5 @@
       "id": 6
     }
   ],
-  "cart": [
-    {
-      "id": 0,
-      "name": "Xiaomi Redmi A1+ 2/32GB (голубой)",
-      "count": 1,
-      "price": 4990
-    },
-    {
-      "id": 1,
-      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
-      "count": 1,
-      "price": 290
-    }
-  ]
+  "cart": []
 }
