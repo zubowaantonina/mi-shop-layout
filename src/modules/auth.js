@@ -35,11 +35,18 @@ export const authFunc = () => {
         openCartBtn.classList.add("d-none");
         logoutBtn.classList.add("d-none");
     };
+    const myFunction=()=>{
+        alert("Неправильный номер или пароль");
+       
+        // console.log("Неудача");
+      }
     const checkAuth = () => {
         const user=JSON.parse(localStorage.getItem("auth"));
+        
         if(user) {
             getData("/profile").then((data) => {
             console.log(data);
+           
             if (
                 data.login &&
                 data.login === user.login &&
@@ -50,6 +57,7 @@ export const authFunc = () => {
                 login();
                 // localStorage.setItem('auth', JSON.stringify(data));
             } else {
+                // alert('неправильный логин или пароль');
                 console.log("Неудача");
             }
         }); 
@@ -88,6 +96,7 @@ export const authFunc = () => {
                 localStorage.setItem('auth', JSON.stringify(data));
             } else {
                 console.log("Неудача");
+                myFunction();
             }
         });
 
@@ -106,3 +115,40 @@ export const authFunc = () => {
 
     checkAuth();
 };
+
+
+
+
+// function Demo(props) {
+//     onLoad(() => {
+//       const validator = new JustValidate('#basic_form');
+  
+//       validator
+//         .addField('#basic_name', [
+//           {
+//             rule: 'required',
+//           },
+//           {
+//             rule: 'minLength',
+//             value: 3,
+//           },
+//           {
+//             rule: 'maxLength',
+//             value: 15,
+//           },
+//         ])
+        
+//         .addField('#basic_password', [
+//           {
+//             rule: 'required',
+//           },
+//           {
+//             rule: 'password',
+//           },
+//         ])
+       
+//     });
+  
+   
+//   }
+//   Demo(props)

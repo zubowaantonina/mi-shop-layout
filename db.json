@@ -46,5 +46,12 @@
       "id": 6
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "name": "Red Line Ultimate для Xiaomi Redmi 9C (оранжевый)",
+      "price": 300,
+      "count": 3,
+      "id": 2
+    }
+  ]
 }
